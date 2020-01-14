@@ -38,6 +38,12 @@ navStyle.addEventListener("click", (event) => {
     event.stopPropagation()
 })
 
+// Prevent nav item from entering another page
+navStyle.addEventListener("click", (event) => {
+  event.preventDefault();
+  console.log("stopped the link")
+})
+
 
 
 
