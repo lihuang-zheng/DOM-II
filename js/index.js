@@ -86,6 +86,6 @@ h2Style.addEventListener("click", (event) => {
 })
 
 // Un-hover effects for h2
-h2Style.addEventListener("mouseleave", (event) => {
+h2Style.addEventListener("dblclick", (event) => {
     h2Style.style.transform = "scale(1.0)"
 })
