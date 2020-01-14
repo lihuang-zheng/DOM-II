@@ -55,7 +55,7 @@ introImg.addEventListener("mouseleave", () => {
 })
 
 // When clicked, the scale will change to 1.2
-introImg.addEventListener("click", (event) => {
+introImg.addEventListener("click", () => {
     introImg.style.transform = "scale(1.5)"
     introImg.style.transition = "transform 1s"
     bodyStyle.style.webkitFilter = "blur(1px)"
@@ -74,11 +74,13 @@ introImg.addEventListener("dblclick", () => {
 const h2Style = document.querySelector("h2")
 
 // Hover effects for h2
-h2Style.addEventListener("mouseenter", () => {
-    h2Style.style.fontSize = "4rem"
+h2Style.addEventListener("click", (event) => {
+    h2Style.style.transform = "scale(1.5)"
+    h2Style.style.transition = "transform 0.5s"
 })
 
 // Un-hover effects for h2
-h2Style.addEventListener("mouseleave", () => {
-    h2Style.style.fontSize = "3.2rem"
+h2Style.addEventListener("mouseleave", (event) => {
+    h2Style.style.transform = "scale(1.0)"
+
 })
