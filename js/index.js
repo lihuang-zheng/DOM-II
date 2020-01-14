@@ -13,11 +13,13 @@ const h1Style = document.querySelector("h1")
 h1Style.addEventListener("mouseenter", () => {
     h1Style.style.transform = "scale(1.5)"
     h1Style.style.transition = "transform 0.5s"
+    h1Style.style.textShadow = "2.5px 5px 7.5px gray"
 })
 
 // When not hover over, the border will disappear
 h1Style.addEventListener("mouseleave", () => {
     h1Style.style.transform = "scale(1)"
+    h1Style.style.textShadow = "none"
 })
 
 // On click, it will change the background color to light blue.
@@ -64,13 +66,15 @@ introImg.addEventListener("mouseleave", () => {
 introImg.addEventListener("click", () => {
     introImg.style.transform = "scale(1.5)"
     introImg.style.transition = "transform 1s"
-    bodyStyle.style.webkitFilter = "blur(1px)"
+    introImg.style.boxShadow = "10px 20px 30px gray"
+    
 })
 
 // When double clicked, the scale will change back to default (1.0)
 introImg.addEventListener("dblclick", () => {
     introImg.style.transform = "scale(1)"
-    bodyStyle.style.webkitFilter = "blur(0)"
+    introImg.style.transition = "transform 0.3s"
+    introImg.style.boxShadow = "none"
 })
 
 
@@ -83,9 +87,11 @@ const h2Style = document.querySelector("h2")
 h2Style.addEventListener("click", (event) => {
     h2Style.style.transform = "scale(1.5)"
     h2Style.style.transition = "transform 0.5s"
+    h2Style.style.textShadow = "2.5px 5px 7.5px gray"
 })
 
 // Un-hover effects for h2
 h2Style.addEventListener("dblclick", (event) => {
     h2Style.style.transform = "scale(1.0)"
+    h2Style.style.textShadow = "none"
 })
